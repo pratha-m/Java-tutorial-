@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 public class CWH_28_CH6_MultiDimArray {
     public static void main(String[] args) {
         int [][]flats;

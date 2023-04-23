@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 public class CWH_31_CH7_Methods{
     static int logic(int x,int y){ 
         int z;

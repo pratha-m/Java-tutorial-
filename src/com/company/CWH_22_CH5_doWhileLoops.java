@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 import java.util.Scanner;
 public class CWH_22_CH5_doWhileLoops {
    public static void main(String[] args) {

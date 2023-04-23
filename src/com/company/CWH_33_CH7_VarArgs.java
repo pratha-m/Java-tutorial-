@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 public class CWH_33_CH7_VarArgs {
     static int sum(int ...arr){
         //   ...arr worked as int []arr and it stores the arguements as its elements

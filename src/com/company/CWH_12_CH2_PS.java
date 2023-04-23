@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 import java.util.Scanner;
 public class CWH_12_CH2_PS {
     public static void main(String[] args) {

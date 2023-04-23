@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 public class CWH_35_CH7_PS {
     static void multTable(int num){
        for(int i=1;i<=num;i++){

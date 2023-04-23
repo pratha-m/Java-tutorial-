@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 import java.util.Scanner;
 public class CWH_18_CH4_elseif {
     public static void main(String[] args) {

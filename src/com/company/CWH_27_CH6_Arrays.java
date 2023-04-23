@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 public class CWH_27_CH6_Arrays {
     public static void main(String[] args) {
         // int []marks={10,20,30,40};

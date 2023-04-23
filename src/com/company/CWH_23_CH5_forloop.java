@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 
 public class CWH_23_CH5_forloop {
     public static void main(String[] args) {
