@@ -1,5 +1,5 @@
 //package com.company;
-import java.util.Scanner;
+// import java.util.Scanner;
 public class CWH_12_CH2_PS {
     public static void main(String[] args) {
 //        1) result of a=7/4 * 9/2

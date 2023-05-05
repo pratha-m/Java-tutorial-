@@ -1,13 +1,13 @@
 //package com.company;
 
-import java.util.Locale;
+// import java.util.Locale;
 
 public class CWH_14_CH3_STRING_METHODS {
     public static void main(String[] args) {
-        String name="Pratham";
-        String name2="   pratham  ";
-        String name3="pratham is my name and is name";
-        System.out.println(name);
+        // String name="Pratham";
+        // String name2="   pratham  ";
+        // String name3="pratham is my name and is name";
+        // System.out.println(name);
 //        String Methods
 
 //        int len=name.length();

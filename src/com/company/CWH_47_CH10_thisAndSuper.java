@@ -20,6 +20,6 @@ public class CWH_47_CH10_thisAndSuper {
     public static void main(String[] args) {
         // EkClass e=new EkClass(8);
         // System.out.println(e.getA());
-        DoClass d=new DoClass(5);
+        // DoClass d=new DoClass(5);
     }   
 }

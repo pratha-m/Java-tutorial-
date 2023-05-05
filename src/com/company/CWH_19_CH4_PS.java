@@ -1,9 +1,9 @@
 //package com.company;
-import java.util.Scanner;
+// import java.util.Scanner;
 public class CWH_19_CH4_PS {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-//        1)
+        // Scanner sc=new Scanner(System.in);
+    //    1)
 //        int a=10;
 //        if(a=11)
 //            System.out.println("i am 11");

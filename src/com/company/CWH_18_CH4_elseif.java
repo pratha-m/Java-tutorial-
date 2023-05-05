@@ -1,11 +1,11 @@
 //package com.company;
-import java.util.Scanner;
+// import java.util.Scanner;
 public class CWH_18_CH4_elseif {
     public static void main(String[] args) {
-        int age;
-        System.out.println("Enter Age :");
-        Scanner sc=new Scanner(System.in);
-        age=sc.nextInt();
+        // int age;
+        // System.out.println("Enter Age :");
+        // Scanner sc=new Scanner(System.in);
+        // age=sc.nextInt();
 //        switch(age){
 //            case 18:
 //                System.out.println("You are going to be an adult");

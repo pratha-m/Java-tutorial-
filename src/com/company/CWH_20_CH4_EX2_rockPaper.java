@@ -1,9 +1,9 @@
 //package com.company;
-import java.util.Scanner;
-import java.lang.Math;
+// import java.util.Scanner;
+// import java.lang.Math;
 public class CWH_20_CH4_EX2_rockPaper {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        // Scanner sc=new Scanner(System.in);
     //    EXERCISE2)
     //    Eg1)USING 2 Players
     //    System.out.println("Player1 turn enter (1-->Rock,2-->Paper,3-->Scissors) :");

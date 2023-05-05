@@ -1,5 +1,5 @@
 //package com.company;
-import java.util.Scanner;
+// import java.util.Scanner;
 public class CWH_22_CH5_doWhileLoops {
    public static void main(String[] args) {
     //    int num1=10;
@@ -14,13 +14,13 @@ public class CWH_22_CH5_doWhileLoops {
     //      num2++;
     //    }while(num2<5);
     
-     Scanner sc=new Scanner(System.in);
-     int num=sc.nextInt();
-     int start=1;
-     do{
-        System.out.println(start);
-        start++;
-     }while(start<=num);
+   //   Scanner sc=new Scanner(System.in);
+   //   int num=sc.nextInt();
+   //   int start=1;
+   //   do{
+   //      System.out.println(start);
+   //      start++;
+   //   }while(start<=num);
 
     }
 }

@@ -1,10 +1,10 @@
 //package com.company;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class CWH_05_takinginput {
     public static void main(String[] args) {
         System.out.println("Taking Input from user ");
-        Scanner sc=new Scanner(System.in);
+        // Scanner sc=new Scanner(System.in);
 //        Using Integer
 //        System.out.println("Enter Number 1 :");
 //        int a=sc.nextInt();
