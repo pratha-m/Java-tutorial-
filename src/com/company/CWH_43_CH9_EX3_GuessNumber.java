@@ -50,43 +50,43 @@
 // }
 
 // Method2)
-import java.util.Random;
-import java.util.Scanner;
-class Game{
-    public int number;
-    public int inputNumber;
-    public int noOfGuesses=0;
-    Game(){
-        Random rand=new Random();
-        this.number=rand.nextInt(100);
-    }
-    void takeUserInput(){
-        System.out.println("Enter A number :");
-        Scanner sc=new Scanner(System.in);
-        this.inputNumber=sc.nextInt();
-    }
-    boolean isCorrectNumber(){
-        noOfGuesses++; 
-        if(this.inputNumber==number){
-          System.out.println("You guess the correct number it was "+number+" and you guess it in "+noOfGuesses+" Attempts");  
-          return true;
-        }
-        else if(this.inputNumber<number){
-            System.out.println("Sorry Number is less than given number");
-        }
-        else if(this.inputNumber>number){
-            System.out.println("Sorry Number is greater than given number");
-        }
-        return false;
-    }
-}
-public class CWH_43_CH9_EX3_GuessNumber {
-    public static void main(String[] args){
-           Game g=new Game();         
-           boolean b=false;
-           while(!b){
-               g.takeUserInput();
-               b=g.isCorrectNumber();
-           }
-    }
-}
+// import java.util.Random;
+// import java.util.Scanner;
+// class Game{
+//     public int number;
+//     public int inputNumber;
+//     public int noOfGuesses=0;
+//     Game(){
+//         Random rand=new Random();
+//         this.number=rand.nextInt(100);
+//     }
+//     void takeUserInput(){
+//         System.out.println("Enter A number :");
+//         Scanner sc=new Scanner(System.in);
+//         this.inputNumber=sc.nextInt();
+//     }
+//     boolean isCorrectNumber(){
+//         noOfGuesses++; 
+//         if(this.inputNumber==number){
+//           System.out.println("You guess the correct number it was "+number+" and you guess it in "+noOfGuesses+" Attempts");  
+//           return true;
+//         }
+//         else if(this.inputNumber<number){
+//             System.out.println("Sorry Number is less than given number");
+//         }
+//         else if(this.inputNumber>number){
+//             System.out.println("Sorry Number is greater than given number");
+//         }
+//         return false;
+//     }
+// }
+// public class CWH_43_CH9_EX3_GuessNumber {
+//     public static void main(String[] args){
+//            Game g=new Game();         
+//            boolean b=false;
+//            while(!b){
+//                g.takeUserInput();
+//                b=g.isCorrectNumber();
+//            }
+//     }
+// }

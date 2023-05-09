@@ -37,7 +37,7 @@ class childOfDerived1 extends Derived1{
 public class CWH_46_CH10_ConstructInheritence {
     public static void main(String[] args) {
         // Base1 b=new Base1();
-        Derived1 d1=new Derived1();
+        // Derived1 d1=new Derived1();
         // Derived0 d2=new Derived0();
         // Derived1 d3=new Derived1(4,5);
         // Derived0 d4=new Derived0(2,8);
