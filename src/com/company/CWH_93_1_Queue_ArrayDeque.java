@@ -1,5 +1,5 @@
 import java.util.ArrayDeque;
-public class CWH_93_Queue_ArrayDeque {
+public class CWH_93_1_Queue_ArrayDeque {
     public static void main(String[] args) {
         // ArrayDeque<Integer> ad1=new ArrayDeque<>();
         // ad1.add(5);

@@ -1,4 +1,4 @@
-public class CWH_93_Queue_LinkedList {
+public class CWH_93_2_Queue_LinkedList {
    public static void main(String[] args) {
     // Queue<Integer> queue=new LinkedList<>();
     // // offer() method returns true when element successfully added otherwise return false 

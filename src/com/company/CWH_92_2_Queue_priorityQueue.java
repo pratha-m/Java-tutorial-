@@ -1,7 +1,7 @@
 // import java.util.Comparator;
 // import java.util.PriorityQueue;
 
-// public class CWH_92_Queue_priorityQueue {
+// public class CWH_92_2_Queue_priorityQueue {
 //   public static void main(String[] args) {
 //         // PriorityQueue<Integer> pq=new PriorityQueue<>(); // can use all methods of queue
 //         // pq.offer(40);

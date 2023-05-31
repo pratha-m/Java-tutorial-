@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class CWH_91_List_Stack {
+public class CWH_91_2_List_Stack {
    public static void main(String[] args) {
         Stack<String> animals=new Stack<>();
         animals.push("Lion");

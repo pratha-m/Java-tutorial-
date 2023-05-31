@@ -2,7 +2,7 @@
 // import java.util.Map;
 // import java.util.TreeMap;
 
-// public class CWH_95_Maps {
+// public class CWH_95_2_Maps {
 //     public static void main(String[] args) {
 //         // ****HashMap-->stores key value pairs and keys must be unique (if added same key
 //         //  again then their values will be overwrite) all operation in O(1) time *****

@@ -31,7 +31,7 @@
 //         return Objects.hashCode(rollNo);
 //     }
 // }
-// public class CWH_95_Set_Hashset {
+// public class CWH_95_1_Set_Hashset {
 //     public static void main(String[] args) {
 //         // ***Hashset*** 
 //         // HashSet<Integer> h1=new HashSet<>();
