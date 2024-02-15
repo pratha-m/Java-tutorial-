@@ -9,13 +9,20 @@ public class selectionSort{
         System.out.println();
     }
     public static void main(String[] args) {
-        int [] arr = {64,25,12,22,11};
+        int [] arr = {4,3,2};
+        int n=arr.length;
 
         // Normal selectionSort
         // for(int i=0;i<arr.length-1;i++) for(int j=i;j<arr.length;j++) if(arr[j]<arr[i]) swap(arr,i,j);
         // printArray(arr);
 
         // Optimized Selection sort
+        for(int i=1;i<n;i++){
+            for(int j=0;j<n-i;j++){
+                System.out.println(arr[j]+" "+arr[j+1]);
+            }
+            System.out.println();
+        }
         
     }
 }
