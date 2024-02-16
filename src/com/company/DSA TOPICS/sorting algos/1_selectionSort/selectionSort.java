@@ -17,12 +17,6 @@ public class selectionSort{
         // printArray(arr);
 
         // Optimized Selection sort
-        for(int i=1;i<n;i++){
-            for(int j=0;j<n-i;j++){
-                System.out.println(arr[j]+" "+arr[j+1]);
-            }
-            System.out.println();
-        }
         
     }
 }
