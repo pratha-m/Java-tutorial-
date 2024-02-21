@@ -1,52 +1,36 @@
 public class mergeSort{
-    public static void printArray(int arr[]){
-        for(int i=0;i<arr.length;i++) System.out.print(arr[i]+" ");
-        System.out.println();
-   } 
-  public static void merge(int arr[],int s,int e){
-    int mid=(s+e)/2; 
-    
-    int len1=mid-s+1;
-    int len2=e-mid;
-    
-    int first[]=new int[len1];
-    int second[]=new int[len2];
-
-    // copy values
-    int mainArrayInd=s;
-    for(int i=0;i<len1;i++) first[i]=arr[mainArrayInd++];
-    mainArrayInd=mid+1;
-    for(int i=0;i<len2;i++) second[i]=arr[mainArrayInd++];
-
-    // merge 2 sorted arrays 
-    int index1=0;
-    int index2=0;
-    mainArrayInd=s;
-    while(index1<len1 && index2<len2){
-        if(first[index1]<second[index2]) arr[mainArrayInd++]=first[index1++];
-        else arr[mainArrayInd++]=second[index2++];
+  public static void printArray(int arr[]){
+    for(int i=0;i<arr.length;i++) System.out.print(arr[i]+" ");
+    System.out.println();
+  } 
+  public static void merge(int arr[],int start,int mid,int end){
+    int temp[]=new int[end-start+1];
+    int left=start,right=mid+1,index=0;
+    while(left<=mid && right<=end){
+       if(arr[left]<=arr[right]) temp[index++]=arr[left++];
+       else temp[index++]=arr[right++];
     }
+    // copying pending elements of left array to temp array if present
+    while(left<=mid) temp[index++]=arr[left++];
+    // copying pending elements of left array to temp array if present
+    while(right<=end) temp[index++]=arr[right++];
+    index=0;
+    // copying elements to original array 
+    while(start<=end) arr[start++]=temp[index++];
+  }
+  public static void mergeSortFunc(int arr[],int start,int end){
+      if(start==end) return;
+      int mid=start+(end-start)/2;
+      // left side
+      mergeSortFunc(arr,start,mid);
+      // right side
+      mergeSortFunc(arr,mid+1,end);
 
-    while(index1<len1) arr[mainArrayInd++]=first[index1++];
-    while(index2<len2) arr[mainArrayInd++]=second[index2++];
-
-    first=null;
-    second=null;
-  }  
-  public static void mergeSortFunc(int arr[],int s,int e){
-    if(s>=e) return;
-    int mid=(s+e)/2; 
-    // sort left part 
-    mergeSortFunc(arr,s,mid);
-    //  sort right part 
-    mergeSortFunc(arr,mid+1,e);
-    // merge 
-    merge(arr,s,e);
-  }  
+      merge(arr,start,mid,end);
+   } 
   public static void main(String[] args) {
-    int arr[]={38,27,43,3,9,82,10};
-    int n=arr.length;
-    mergeSortFunc(arr,0,n-1);
+    int arr[]={6,3,1,2,8,9,10,7,3,10};
+    mergeSortFunc(arr,0,arr.length-1);
     printArray(arr);
   }   
 }
