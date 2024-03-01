@@ -13,6 +13,24 @@ public class SinglyLinkedList{
         head=temp;
         return head;
     }
+    public static Node insertAtMiddle(Node head,int data){
+        Node temp=new Node(data);
+        Node back=head,front=head.next;
+        int length=0,index=0;
+        while(back!=null){
+            length++;
+            back=back.next;
+        }
+        back=head;
+        while(index!=length/2-1){
+            index++;
+            back=back.next;
+            front=front.next;
+        }
+        back.next=temp;
+        temp.next=front;
+        return head;
+    }
     public static Node insertAtEnd(Node head,int data){
         Node temp=new Node(data);
         Node tail=head;
@@ -28,12 +46,15 @@ public class SinglyLinkedList{
     }
     public static void main(String[] args) {
         Node head=new Node(1);
-        head=insertAtHead(head,2);
-        head=insertAtHead(head,3);
-        head=insertAtHead(head,4);
+        head=insertAtEnd(head,2);
+        head=insertAtEnd(head,3);
+        head=insertAtEnd(head,4);
         head=insertAtEnd(head, 5);
         head=insertAtEnd(head, 6);
         head=insertAtEnd(head, 7);
+        printLinkedlist(head);
+        System.out.println();
+        insertAtMiddle(head,10);
         printLinkedlist(head);
     }
 }

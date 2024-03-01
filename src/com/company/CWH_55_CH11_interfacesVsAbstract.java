@@ -29,6 +29,7 @@ class AvonCycle implements Bicycle,HornBicycle{
 }
 public class CWH_55_CH11_interfacesVsAbstract {
      public static void main(String[] args) {
+        
         // AvonCycle ac=new AvonCycle();
         // ac.applyBrake(0);
         // ac.speedUp(2);

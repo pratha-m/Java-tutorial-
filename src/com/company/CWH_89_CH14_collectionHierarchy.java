@@ -22,7 +22,7 @@ public class CWH_89_CH14_collectionHierarchy{
         // (iii)LinkedHashSet 
         // (iv)TreeSet 
         // 3)Queue
-        // (i)ArrayDeque 
+        // (i)ArrayDeque
         // (ii)LinkedList 
         // (iii)PriorityQueue 
 
