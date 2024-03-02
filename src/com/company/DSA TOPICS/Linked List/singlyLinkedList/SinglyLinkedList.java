@@ -38,6 +38,10 @@ public class SinglyLinkedList{
         tail.next=temp;
         return head; 
     }
+    public static Node deleteHead(Node head){
+        head=head.next;
+        return head; 
+    }    
     public static void printLinkedlist(Node head){
           while(head!=null){
             System.out.print(head.data+" ");
@@ -53,8 +57,8 @@ public class SinglyLinkedList{
         head=insertAtEnd(head, 6);
         head=insertAtEnd(head, 7);
         printLinkedlist(head);
+        head=deleteHead(head);
         System.out.println();
-        insertAtMiddle(head,10);
         printLinkedlist(head);
     }
 }
