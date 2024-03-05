@@ -41,6 +41,9 @@ public class SinglyLinkedList{
     public static Node deleteHead(Node head){
         head=head.next;
         return head; 
+    }
+    public static Node deleteEndNode(Node head){
+        return head;
     }    
     public static void printLinkedlist(Node head){
           while(head!=null){
