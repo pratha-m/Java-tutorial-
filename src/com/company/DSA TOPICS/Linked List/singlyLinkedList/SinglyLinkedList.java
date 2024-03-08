@@ -43,8 +43,19 @@ public class SinglyLinkedList{
         return head; 
     }
     public static Node deleteEndNode(Node head){
+        Node temp=head.next;
+        while(temp.next!=null){
+            temp=temp.next; 
+        }
         return head;
     }    
+    public static Node deleteAtIndex(Node head,int index){
+        int i=0;
+        Node prev=head;
+        while(i!=index){
+            i++;
+        }
+    }
     public static void printLinkedlist(Node head){
           while(head!=null){
             System.out.print(head.data+" ");
