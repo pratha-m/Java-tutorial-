@@ -52,15 +52,21 @@ public class SinglyLinkedList{
     public static Node deleteAtIndex(Node head,int index){
         int i=0;
         Node prev=head;
-        while(i!=index){
+        Node forward=head.next;
+        while(i!=index-1){
             i++;
+            prev=prev.next;
+            forward=forward.next;
         }
+        prev.next=forward.next;
+        return head;
     }
     public static void printLinkedlist(Node head){
           while(head!=null){
             System.out.print(head.data+" ");
             head=head.next;
           }
+          System.out.println();
     }
     public static void main(String[] args) {
         Node head=new Node(1);
@@ -70,9 +76,6 @@ public class SinglyLinkedList{
         head=insertAtEnd(head, 5);
         head=insertAtEnd(head, 6);
         head=insertAtEnd(head, 7);
-        printLinkedlist(head);
-        head=deleteHead(head);
-        System.out.println();
         printLinkedlist(head);
     }
 }
