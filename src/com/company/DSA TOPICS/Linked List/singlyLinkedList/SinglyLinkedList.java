@@ -43,10 +43,13 @@ public class SinglyLinkedList{
         return head; 
     }
     public static Node deleteEndNode(Node head){
-        Node temp=head.next;
-        while(temp.next!=null){
-            temp=temp.next; 
+        Node p=head.next;
+        Node q=p.next;
+        while(q.next!=null){
+            p=p.next;
+            q=q.next; 
         }
+        p.next=null;
         return head;
     }    
     public static Node deleteAtIndex(Node head,int index){
@@ -76,6 +79,8 @@ public class SinglyLinkedList{
         head=insertAtEnd(head, 5);
         head=insertAtEnd(head, 6);
         head=insertAtEnd(head, 7);
+        printLinkedlist(head);
+        head=deleteEndNode(head);
         printLinkedlist(head);
     }
 }
