@@ -66,7 +66,11 @@ public class DoublyLinkedList {
         return head; 
     }
     public static Node insertAtStart(Node head,int data){
-
+        Node temp=new Node(data);
+        head.back=temp;
+        temp.next=head;
+        head=temp;
+        return temp;
     }
     public static void printLinkedlist(Node head){
         while(head!=null){
@@ -79,7 +83,7 @@ public class DoublyLinkedList {
         int arr[]={1,5,6,7,8};
         Node head=convertArrToDLL(arr);
         printLinkedlist(head);
-        head=deleteKthNode(head,6);
+        head=insertAtStart(head,12);
         printLinkedlist(head);
     }
 }
