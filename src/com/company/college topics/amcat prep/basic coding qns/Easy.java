@@ -47,6 +47,58 @@ public class Easy{
         // }
         // if(resNum==num) System.out.println("Strong");
         // else System.out.println("Not Strong number");
-        // 5)
+        // 5)automorphic number or not
+        // Input  : N = 76 
+        // Output : Automorphic
+        // Explanation: As 76*76 = 5776
+        // Input  : N = 25
+        // Output : Automorphic
+        // As 25*25 = 625
+        // int num=7;
+        // int mult=num*num;
+        // int temp=num;
+        // boolean automorphic=true;
+        // while(temp!=0){
+        //    if(mult%10!=temp%10) automorphic=false;
+        //    temp=temp/10;
+        //    mult=mult/10;
+        // }
+        // if(automorphic) System.out.println("automorphic");
+        // else System.out.println("not automorphic");
+        // 6)abundant or not 
+        // inp->12
+        // The divisors of 12 are 1, 2, 3, 4 and 6.
+        // The sum of divisors of 12 is 16.
+        // 12 < 16. Hence, 12 is an abundant number.
+        // Easy 
+        // 7)fibb upto n
+        // int num=200;
+        // int a=0,b=1,c=0;
+        // System.out.print(a+" "+b);
+        // while(c<num){
+        //     c=a+b;
+        //     System.out.print(" "+c);
+        //     a=b;b=c;
+        // }
+        // 8)print 
+        // * * * * * *
+        // *       *
+        // *       *
+        // *       *
+        // * * * * * *
+        // int n=5;
+        // for(int i=0;i<n;i++){
+        //     for(int j=0;j<n;j++){
+        //         if(i==0 || i==n-1 || j==0 || j==n-2){
+        //             System.out.print("*");
+        //         }
+        //         else{
+        //             System.out.print(" ");
+        //         }
+        //     }
+        //     System.out.println();
+        // }
+        
+
     }
 }
