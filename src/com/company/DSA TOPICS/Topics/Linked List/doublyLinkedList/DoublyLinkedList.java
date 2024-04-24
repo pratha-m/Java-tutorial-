@@ -42,30 +42,40 @@ public class DoublyLinkedList {
         return head;
     }
     public static Node deleteKthNode(Node head,int k){
-        if(head==null || head.next==null) return null;
+        if(head==null) return null;
         Node temp=head;
         int i=0;
-        System.out.println("P1");
         while(temp!=null){
             i++;
             if(i==k) break;
             temp=temp.next;
         }
-        System.out.println("P2");
         Node prev=temp.back;
         Node forward=temp.next;
-        System.out.println("P3");
         if(prev==null && forward==null) return null;
         else if(prev==null) return deleteHeadNode(head);
         else if(forward==null) return deleteTailNode(head);
         prev.next=forward;
         forward.back=prev;
-        System.out.println("P3");
         temp.next=null;
         temp.back=null;
         return head; 
     }
-    public static Node insertAtStart(Node head,int data){
+    public static void deleteNode(Node temp){
+        Node prev=temp.back;
+        Node front=temp.next;
+
+        if(front==null){
+            prev.next=null;
+            temp.back=null;
+            return;
+        }
+        prev.next=front;
+        front.back=prev;
+        temp.next=null;
+        temp.back=null;
+    }
+    public static Node insertBeforeHead(Node head,int data){
         Node temp=new Node(data);
         head.back=temp;
         temp.next=head;
@@ -78,12 +88,12 @@ public class DoublyLinkedList {
           head=head.next;
         }
         System.out.println();
-   }
+    }
     public static void main(String[] args) {
         int arr[]={1,5,6,7,8};
         Node head=convertArrToDLL(arr);
         printLinkedlist(head);
-        head=insertAtStart(head,12);
-        printLinkedlist(head);
+        deleteNode(head.next);
+        printLinkedlist(head); 
     }
 }

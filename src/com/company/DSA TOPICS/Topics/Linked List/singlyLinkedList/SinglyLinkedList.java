@@ -64,6 +64,12 @@ public class SinglyLinkedList{
         prev.next=forward.next;
         return head;
     }
+    public static void deleteGivenNode(Node temp){
+        Node after=temp.next;
+        temp.data=after.data;
+        temp.next=after.next;
+        after.next=null;
+    }
     public static void printLinkedlist(Node head){
           while(head!=null){
             System.out.print(head.data+" ");
@@ -80,7 +86,7 @@ public class SinglyLinkedList{
         head=insertAtEnd(head, 6);
         head=insertAtEnd(head, 7);
         printLinkedlist(head);
-        head=deleteEndNode(head);
+        deleteGivenNode(head.next);
         printLinkedlist(head);
     }
 }
