@@ -76,11 +76,41 @@ public class DoublyLinkedList {
         temp.back=null;
     }
     public static Node insertBeforeHead(Node head,int data){
-        Node temp=new Node(data);
-        head.back=temp;
-        temp.next=head;
-        head=temp;
-        return temp;
+        Node newHead=new Node(data,head,null);
+        head.back=newHead;
+        return newHead;
+    }
+    public static Node insertBeforeTailNode(Node head,int data){
+        if(head==null) return new Node(data,null,null);
+        if(head.next==null) return insertBeforeHead(head,data);    
+        Node tailNode=head; 
+        while(tailNode.next!=null) tailNode=tailNode.next;
+        Node prev=tailNode.back;
+        Node insertNode=new Node(data,tailNode,prev);
+        prev.next=insertNode;
+        tailNode.back=insertNode;
+        return head;
+    }
+    public static Node insertBeforekthNode(Node head,int data,int k){
+        if(k==1) return insertBeforeHead(head,data);
+        Node temp=head;
+        int ind=0;
+        while(temp!=null){
+            ind++;
+            if(ind==k) break;
+            temp=temp.next; 
+        }
+        Node prev=temp.back;
+        Node newNode=new Node(data,temp,prev);
+        prev.next=newNode;
+        temp.back=newNode;
+        return head;
+    }
+    public static void insertBeforeGivenNode(Node node,int data){
+        Node prev=node.back;
+        Node newNode=new Node(data,node,prev);
+        prev.next=newNode;
+        node.back=newNode;
     }
     public static void printLinkedlist(Node head){
         while(head!=null){
@@ -93,7 +123,8 @@ public class DoublyLinkedList {
         int arr[]={1,5,6,7,8};
         Node head=convertArrToDLL(arr);
         printLinkedlist(head);
-        deleteNode(head.next);
+        insertBeforeGivenNode(head.next,10);
         printLinkedlist(head); 
     }
 }
+ 
