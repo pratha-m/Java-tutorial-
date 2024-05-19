@@ -1,5 +1,9 @@
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
+import java.util.TreeMap;
 
 class Node{
     int data;
@@ -92,10 +96,102 @@ public class Trees{
         }
         return height;
     }
+    public static int heightTreeMeth2(Node root){
+        if(root==null) return 0;
+        int left=heightTreeMeth2(root.left);
+        int right=heightTreeMeth2(root.right);
+        return Math.max(left,right)+1;
+    }
+    public static int diameterMeth1(Node root){ // not optimized
+        if(root==null) return 0;
+        int diam1=diameterMeth1(root.left);
+        int diam2=diameterMeth1(root.right);
+        int diam3=heightTreeMeth2(root.left)+heightTreeMeth2(root.right)+1;
+        return Math.max(diam1,Math.max(diam2, diam3));
+    }
+    public int[] diameterMeth2(Node root){ // not fully optimized
+        if(root==null){
+            int arr[]={0,0};
+            return arr;
+        }
+        int left[]=diameterMeth2(root.left);
+        int right[]=diameterMeth2(root.right);
+        
+        int diam1=left[0];
+        int diam2=right[0];
+        int diam3=left[1]+right[1]+1;
+        
+        int ans[]=new int[2];
+        ans[0]=Math.max(diam1,Math.max(diam2, diam3));
+        ans[1]=Math.max(left[1],right[1])+1;
+        return ans;
+    }
+    int path=0;
+    public int diameter(Node root){
+        if(root==null) return 0;
+        int left=diameter(root.left);
+        int right=diameter(root.right);
+        path=Math.max(left+right,path);
+        return Math.max(left,right)+1;
+    }
+    public int diameterMeth3(Node root){
+        diameter(root);
+        return path;
+    }
+    static class Pair{
+        Node node;
+        int index;
+        Pair(Node node,int index){
+            this.node=node;
+            this.index=index;
+        }
+    }
+    public static ArrayList<Integer> topView(Node root){
+        Queue<Pair> q=new LinkedList<>();
+        Map<Integer,Integer> map=new TreeMap<Integer,Integer>();    
+        q.add(new Pair(root,0));
+        while(!q.isEmpty()){
+            Pair currNode=q.remove();
+            if(!map.containsKey(currNode.index)) map.put(currNode.index,currNode.node.data);
+            if(currNode.node.left!=null) q.add(new Pair(currNode.node.left,currNode.index-1));
+            if(currNode.node.right!=null) q.add(new Pair(currNode.node.right,currNode.index+1));
+        }
+        ArrayList<Integer> topViewElems=new ArrayList<>();
+        for(Map.Entry<Integer,Integer> ele:map.entrySet()) topViewElems.add(ele.getValue());
+        return topViewElems;   
+    }
+    public static ArrayList<Integer> bottomView(Node root){
+        Queue<Pair> q=new LinkedList<>();
+        Map<Integer,Integer> map=new TreeMap<Integer,Integer>();    
+        q.add(new Pair(root,0));
+        while(!q.isEmpty()){
+            Pair currNode=q.remove();
+            map.put(currNode.index,currNode.node.data);
+            if(currNode.node.left!=null) q.add(new Pair(currNode.node.left,currNode.index-1));
+            if(currNode.node.right!=null) q.add(new Pair(currNode.node.right,currNode.index+1));
+        }
+        ArrayList<Integer> bottomViewElems=new ArrayList<>();
+        for(Map.Entry<Integer,Integer> ele:map.entrySet()) bottomViewElems.add(ele.getValue());
+        return bottomViewElems;   
+    }
+    public static void leftView(Node root,ArrayList<Integer> list,int level){
+        if(root==null) return;
+        if(list.size()==level) list.add(level,root.data);
+        leftView(root.left,list,level+1);
+        leftView(root.right,list,level+1);
+    }
+    public static void rightView(Node root,ArrayList<Integer> list,int level){
+        if(root==null) return;
+        if(list.size()==level) list.add(level,root.data);
+        rightView(root.right,list,level+1);
+        rightView(root.left,list,level+1);
+    }
     public static void main(String[] args) {
         int arr[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree bt=new BinaryTree();
         Node tree=bt.BuildTree(arr);
-        System.out.println(heightTree(tree));
+        ArrayList<Integer> al=new ArrayList<>();
+        leftView(tree,al,0);
+        System.out.println(al);
     }
 }
