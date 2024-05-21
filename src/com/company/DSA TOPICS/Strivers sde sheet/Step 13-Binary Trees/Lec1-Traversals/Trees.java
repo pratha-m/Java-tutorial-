@@ -107,7 +107,7 @@ public class Trees{
         int diam1=diameterMeth1(root.left);
         int diam2=diameterMeth1(root.right);
         int diam3=heightTreeMeth2(root.left)+heightTreeMeth2(root.right)+1;
-        return Math.max(diam1,Math.max(diam2, diam3));
+        return Math.max(diam1,Math.max(diam2,diam3));
     }
     public int[] diameterMeth2(Node root){ // not fully optimized
         if(root==null){
