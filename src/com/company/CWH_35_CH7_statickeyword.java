@@ -65,6 +65,9 @@ public class CWH_35_CH7_statickeyword {
         // Example1 e1=new Example1();
         // Example1 e2=new Example1();
         // Example1 e3=new Example1();
+        // System.out.println(e1.count1+" "+e1.count2);
+        // System.out.println(e2.count1+" "+e2.count2);
+        // System.out.println(e3.count1+" "+e3.count2);
 
         // Example2 ex1=new Example2();
         // System.out.println(ex1.multiply(10,20));

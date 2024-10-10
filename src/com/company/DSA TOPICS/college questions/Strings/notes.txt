@@ -1,0 +1,6 @@
+Q1:logest common prefix=>DONE
+Q2:Longest K Unique Character Substrings=>PENDING
+Q3:Sum of numbers in string=>DONE
+Q4:Reverse words in a given string=>DONE
+Q5:Extract the greatest Number from the String=>DONE
+Q6:Palindromic Substrings
